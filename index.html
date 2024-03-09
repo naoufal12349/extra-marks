@@ -1,1 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+				<meta charset="UTF-8">
+				<title>ZouBir's calculator</title>
+</head>
+<link rel="stylesheet" href="ex.css"></link>
+<body>
+				<section class="fheader">
+								<h1 class="zoubir">ZouBir's</h1>
+								<h1 class="calc">Calculaor</h1>
+								<h6 class="desc">
+												<i>
+															from	Elmehdi Elmenjra height school
+												</i>
+								</h6>
+				</section>
+					<form id="fpage">
+  <label for="optionSelect">Choose an option:</label>
+  <select id="optionSelect">
+    <option value="pc">pc</option>
+    <option value="svt">svt</option>
+    <option value="literature">literature</option>
+  </select>
+  <button class="fbutt" type="submit">Submit</button>
+</form>
+<script>
+				const form = document.getElementById('fpage');
+form.addEventListener('submit', function(event) {
+  event.preventDefault();
+  const selectedOption = document.getElementById('optionSelect').value;
+  if (selectedOption === 'pc') {
+    window.location.href = 'pc.html';
+  } else if (selectedOption === 'svt') {
+    window.location.href = 'svt.html';
+  } else {
+    window.location.href = 'let.html';
+  }
+});
 
+</script>
+</body>
+</html>
