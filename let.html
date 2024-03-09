@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+				<meta charset="UTF-8">
+				<meta name="viewport" content="width=device-width, initial-scale=1.0">
+				<title>Page title</title>
+	
+		<style>
+					*{
+				margin: 0;
+				box-sizing: border-box;
+				transition: 1s ease;
+}
+body {
+				width: 100%;
+				min-height: 100vh;	
+				padding-bottom: 100px;		
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+label {
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #ee0a00;
+}
+input[type=number] {
+  width: 70%;
+  max-width: 600px;
+  padding: 15px;
+  border-radius: 20px;
+  background-color: #bfffff;
+  border: 1px solid blue;
+  text-align: right;
+}
+input[type=button] {		
+			 background-color: #ff0021;
+			 border: none;
+			 width: 30%;
+			 font-size: 25px;
+			 font-weight: bolder;
+			 color: #3f8dff;
+			 border-radius: 18px;
+}
+input[type=button]:hover {									
+}
+#result {
+				margin: 15px;		
+				border-top: 2px red solid;  
+				color: #e4001c;
+				font-size: 40px;
+				font-weight: lighter;
+				padding-top: 5px;		
+				text-align: center;		
+}
+div {
+				width: 50px;
+				height: 50px;
+				background: #ff0021;
+				border-radius: 50%;
+				text-align: center;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				font-size: 30px;
+				font-weight: bold;
+				color: #3f8dff;
+}
+h1 {
+				color: #3f8dff;
+				font-size: 40px;
+				font-weight: lighter;				
+				border-bottom: 5px solid red;
+				padding-bottom: 5px;
+				margin-bottom: 20px;
+				text-align: center;
+}
+
+	</style>
+				
+				
+				
+</head>
+<body>
+				 <form>
+				 				<div>
+				 						   let
+				 				</div>
+				 				<h1>
+				 								ZouBir's<br>
+				 						calculator
+				 				</h1>				 				
+  <label for="math">: الرياضيات</label>
+  <input type="number" placeholder="أدخل نقطتك" id="math" name="math" min="0" max="20" step="0.01">
+  <br>
+  <label for="hes">: الإجتماعيات</label>
+  <input type="number" placeholder="أدخل نقطتك" id="hes" name="hes" min="0" max="20" step="0.01">
+  <br>
+  <label for="pilosophy">: الفلسفة</label>
+  <input type="number" placeholder="أدخل نقطتك" id="phy" name="philosophy" min="0" max="20" step="0.01">
+  <br>
+  <label for="English">: الإنجليزية</label>
+  <input type="number" placeholder="أدخل نقطتك" id="eng" name="English" min="0" max="20" step="0.01">
+  <br>
+  <label for="Arabic">: العربية</label>
+  <input type="number" placeholder="أدخل نقطتك" id="arb" name="Arabic" min="0" max="20" step="0.01">
+  <br>
+  <label for="french">: الفرنسية</label>
+  <input type="number" placeholder="أدخل نقطتك" id="fr" name="french" min="0" max="20" step="0.01">
+  <br>
+  <label for="Islamic education">:
+  				التربية الإسلامية
+  				</label>
+  <input type="number" placeholder="أدخل نقطتك" id="ei" name="Islamic education" min="0" max="20" step="0.01">
+  <br>
+    <label for="sport">: التربية البدنية</label>
+  <input type="number" placeholder="أدخل نقطتك" id="sport" name="sport" min="0" max="20" step="0.01">
+  <br>
+   <label for="behavior">: المواظبة والسلوك</label>
+  <input type="number" placeholder="أدخل نقطتك" id="beh" name="behavior" min="0" max="20" step="0.01">
+  <br>
+  <input type="button" onclick="calculateResult()" value="النتيجة" id="button">
+  <label id="result"></label>
+</form>			
+</body>
+
+
+
+
+
+<script>
+				function calculateResult() {
+			var marks = [document.getElementById("math").value*1,document.getElementById("hes").value*4,document.getElementById("phy").value*4,document.getElementById("eng").value*3,document.getElementById("arb").value*3,document.getElementById("fr").value*4, document.getElementById("ei").value*2, document.getElementById("sport").value*4,document.getElementById("beh").value];
+			var total = 0;
+			
+			for (var i = 0; i < marks.length; i++) {
+				total += parseInt(marks[i], 10);
+			}
+			var total = total/26 ;
+			var total = total.toFixed(2);	document.getElementById("result").innerHTML = total;
+			if (total<10) {
+				alert('آسف صديقي يبدو أنك تحتاج لبذل جهد أكبر ')
+}else if (total<17){
+				alert('جيد بالتوفيق في مسيرتك')
+}  
+else {
+				alert('ممتاز، عمل أكثر من رائع مزيدا من العطاء.')
+} 
+		}
+	
+	
+</script>
+</body>
+</html>
+-
